@@ -30,9 +30,6 @@ int main(int argc, char *argv[])
     //* Create gesture a object:
     landmarks_to_shm::gesture ges;
 
-    //* Print gesture
-    ges.print_gestures3d();
-
     //* Get share memory array from shared library
     //  * open the managed segment
     boost::interprocess::managed_shared_memory segment(
