@@ -17,7 +17,6 @@ SOURCES += \
         ../mediapipe/mediapipe/landmarks_to_shm/landmarks_datatype.cc \
         ../mediapipe/mediapipe/landmarks_to_shm/landmarks_to_shm.cc \
         gesture.cpp \
-        gesturelibrary.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -36,8 +35,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     ../mediapipe/mediapipe/landmarks_to_shm/landmarks_datatype.h \
     ../mediapipe/mediapipe/landmarks_to_shm/landmarks_to_shm.h \
-    gesture.h \
-    gesturelibrary.h
+    gesture.h
 
 LIBS += \
     -lrt

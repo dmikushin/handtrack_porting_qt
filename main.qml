@@ -12,7 +12,7 @@ Window {
         id:ges
     }
     Timer {
-        interval: 1000
+        interval: 100
         repeat:true
         running: true
         onTriggered: {
