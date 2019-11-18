@@ -6,7 +6,7 @@ Gesture::Gesture(QObject *parent):
 
 }
 
-float *Gesture::Get(){
+float *Gesture::Get(float *array){
     //# Gesture Library
     //* Discription:
     //  * screen as 256*256, u-v coordinate system
@@ -38,16 +38,16 @@ float *Gesture::Get(){
     //  * else id=0~31 is a predefined gesture
     int gestureID = (int)_bbCentral_ptr[0].z;
 
-    float *msg = new float[3] ();
-    msg[0] = u;
-    msg[1] = v;
-    msg[2] = (float)gestureID;
-    return msg;
+    array[0] = u;
+    array[1] = v;
+    array[2] = (float)gestureID;
+    return array;
 
 }
 QString Gesture::gestureID(){
 
-    float *msg = Gesture::Get();
+    float msg[3];
+    Gesture::Get(msg);
 
     QString u = QString::number(msg[0]);
     QString v = QString::number(msg[1]);

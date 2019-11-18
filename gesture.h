@@ -10,7 +10,7 @@ class Gesture : public QObject
     Q_PROPERTY(QString gestureID READ gestureID )
 public:
     explicit Gesture(QObject *parent = nullptr);
-    float *Get();
+    float *Get(float *array);
     QString gestureID();
 };
 
